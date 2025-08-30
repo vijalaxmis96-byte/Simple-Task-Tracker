@@ -1,94 +1,130 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
+  justify-content: center;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.card {
+.app {
   background: white;
-  border-radius: 15px;
-  padding: 20px;
-  width: 400px;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  width: 420px;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-h1 {
-  margin-bottom: 10px;
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #444;
 }
 
 .stats {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 20px;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #555;
 }
 
+/* Input */
 .task-form {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .task-form input {
   flex: 1;
   padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
 }
 
-.task-form button {
+.add-btn {
   margin-left: 10px;
-  padding: 10px 15px;
-  background: #4a90e2;
+  padding: 10px 14px;
+  background: #4e73df;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
+  transition: background 0.3s;
 }
 
+.add-btn:hover {
+  background: #2e59d9;
+}
+
+/* Task list */
 .task-list {
-  list-style: none;
-  padding: 0;
+  margin-top: 10px;
 }
 
-.task-list li {
-  background: #f5f5f5;
-  margin: 8px 0;
-  padding: 10px;
-  border-radius: 8px;
+.task-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: #f8f9fc;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #e3e6f0;
 }
 
-.task-list li.completed span {
+.task-item.completed {
+  background: #e6ffed;
+}
+
+.task-item.completed .task-text {
   text-decoration: line-through;
   color: gray;
 }
 
-.task-list button {
-  margin-left: 5px;
-  padding: 5px 10px;
+.task-buttons button {
+  margin-left: 8px;
   border: none;
+  padding: 6px 12px;
   border-radius: 6px;
   cursor: pointer;
+  font-size: 13px;
+  transition: 0.2s;
 }
 
-.task-list button.delete {
-  background: #e74c3c;
+/* Buttons */
+.complete-btn {
+  background: #1cc88a;
   color: white;
 }
 
-.task-list button:not(.delete) {
-  background: #2ecc71;
+.complete-btn:hover {
+  background: #17a673;
+}
+
+.undo-btn {
+  background: #858796;
   color: white;
+}
+
+.undo-btn:hover {
+  background: #6c757d;
+}
+
+.delete-btn {
+  background: #e74a3b;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #be2617;
 }
